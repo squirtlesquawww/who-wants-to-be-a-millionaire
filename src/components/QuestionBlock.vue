@@ -1,16 +1,28 @@
 <template>
-    <div class="text-3xl">
-        {{ question }}
+    <div class="text-3xl border-2 border-solid border-slate-500 bg-blue-900 text-white">
+        <div class="p-5">
+            {{ question }}
 
-        <div class="grid grid-cols-2 gap-4">
-            <div>A. {{ answerA }}</div>
-            <div>B. {{ answerB }}</div>
-            <div>C. {{ answerC }}</div>
-            <div>D. {{ answerD }}</div>
         </div>
-
-        <!-- <input type="text" v-model="question2"> -->
-        <!-- {{ question2 }} -->
+        <div class="grid grid-cols-2">
+            <div class="border-2 border-solid border-slate-500 p-3" :class="{ 'bg-yellow-600': hoverA }"
+                @mouseover="hoverA = true" @mouseleave="hoverA = false">
+                <span class="text-amber-400">A.</span> {{ answerA }}
+            </div>
+            <div class="border-2 border-solid border-slate-500 p-3" :class="{ 'bg-yellow-600': hoverB }"
+                @mouseover="hoverB = true" @mouseleave="hoverB = false">
+                <span class="text-amber-400">B.</span> {{ answerB }}
+            </div>
+            <div class="border-2 border-solid border-slate-500 p-3" :class="{ 'bg-yellow-600': hoverC }"
+                @mouseover="hoverC = true" @mouseleave="hoverC = false">
+                <span class="text-amber-400">C.</span> {{ answerC }}
+            </div>
+            <div class="border-2 border-solid border-slate-500 p-3" :class="{ 'bg-yellow-600': hoverD }"
+                @mouseover="hoverD = true" @mouseleave="hoverD = false">
+                <span class="text-amber-400">D.</span> {{ answerD }}
+            </div>
+            {{ hover}}
+        </div>
     </div>
 </template>
   
@@ -27,9 +39,13 @@ export default {
     },
     data: () => {
         return {
-            question2: 'slafdjskdlf'
+            hoverA: false,
+            hoverB: false,
+            hoverC: false,
+            hoverD: false
         }
     }
 }
 </script>
   
+<!-- bg-yellow-600 -->
