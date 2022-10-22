@@ -31,14 +31,11 @@
 export default {
   name: "MoneyList",
   props: {
-    activeAmount: { type: Number, required: false, default: 0 },
+    activeAmount: { type: Number, required: false, default: 14 },
+    amounts: { type: Array, required: true },
   },
   data: () => {
     return {
-      amounts: [
-        100, 200, 300, 500, 1000, 2000, 4000, 8000, 16000, 32000, 64000, 125000,
-        250000, 500000, 1000000,
-      ],
       // items: [{ message: 'Foo' }, { message: 'Bar' }]
     };
   },
