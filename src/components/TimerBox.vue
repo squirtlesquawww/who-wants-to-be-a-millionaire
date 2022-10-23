@@ -8,7 +8,7 @@
     "
   >
     timer
-    {{ seconds }} {{ remainingTime }}
+    {{ Math.round(remainingTime) }}
   </div>
 </template>
   
